@@ -1,0 +1,10 @@
+services:
+  qe_cpu:
+    build: 
+      context: ./qe
+      args:
+        QE_VER: ${QE_VER}
+        BUILD_THREADS: ${BUILD_THREADS}
+    container_name: qe.${QE_VER}_cpu
+    volumes:
+      - "${DATA_DIRECTORY}:/mnt/data"
