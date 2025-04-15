@@ -1,0 +1,1 @@
+This example was created with help from [The University of Tokyo: MateriApps](https://ma.issp.u-tokyo.ac.jp/en/app-post/2000) with pseudopotentials from [Materials Cloud SSSP](https://www.materialscloud.org/discover/sssp/table/efficiency).
