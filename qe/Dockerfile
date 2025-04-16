@@ -47,7 +47,7 @@ RUN git clone https://gitlab.com/QEF/q-e --tag qe-${QE_VER}
 # Build  Quantum Espresso
 ARG BUILD_THREADS
 WORKDIR /home/qe/qe-${QE_VER}/build
-RUN cmake -DCMAKE_Fortran_COMPILER=mpif90 -DCMAKE_C_COMPILER=mpicc -DCMAKE_INSTALL_PREFIX="/home/qe/qe-${QE_VER}/bin" ..
+RUN cmake -DCMAKE_Fortran_COMPILER=mpif90 -DCMAKE_C_COMPILER=mpicc -DCMAKE_INSTALL_PREFIX="/home/qe/qe-${QE_VER}/build/bin" ..
 RUN make -j${BUILD_THREADS}
 
 # Set default threading and add Quantum Espresso (pw.x) to PATH
