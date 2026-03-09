@@ -5,6 +5,7 @@ services:
       args:
         QE_VER: ${QE_VER}
         BUILD_THREADS: ${BUILD_THREADS}
-    container_name: qe.${QE_VER}_cpu
+    container_name: qe.${QE_VER}-cpu
+    user: "${HOST_UID}:${HOST_GID}"
     volumes:
-      - "${DATA_DIRECTORY}:/mnt/data"
+      - "${DATA_DIRECTORY}:/mnt/data:Z"
